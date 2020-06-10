@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "S1GfeD01NdM8ZxNMFkQdQjSO0OAtNBw98JHBdUU6VGgtpcSBaXjjRnKon5h4TEo4vcN0GHe1Ba7d0FSua8OP8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\StudentManagementSystem\\StudentManagementSystem\\StudentManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
