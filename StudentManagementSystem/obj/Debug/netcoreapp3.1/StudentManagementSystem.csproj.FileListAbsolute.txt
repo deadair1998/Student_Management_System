@@ -11,3 +11,16 @@ C:\Users\ADMIN\source\repos\StudentManagementSystem\StudentManagementSystem\obj\
 C:\Users\ADMIN\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.dll
 C:\Users\ADMIN\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.pdb
 C:\Users\ADMIN\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.genruntimeconfig.cache
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.exe
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.deps.json
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.runtimeconfig.json
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.runtimeconfig.dev.json
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.dll
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\bin\Debug\netcoreapp3.1\StudentManagementSystem.pdb
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.csprojAssemblyReference.cache
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.AssemblyInfoInputs.cache
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.AssemblyInfo.cs
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.csproj.CoreCompileInputs.cache
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.dll
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.pdb
+E:\HOCTAPGRW\LectureC#\NGO TIEU MY GCD19832\Student_Management_System\StudentManagementSystem\obj\Debug\netcoreapp3.1\StudentManagementSystem.genruntimeconfig.cache

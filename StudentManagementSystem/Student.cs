@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace StudentManagementSystem
+﻿namespace StudentManagementSystem
 {
-    class Student
-    {
-        public int id;
-        public double grade;
+  #region : Student :
+  class Student
+  {
+    #region Class Variables...
+    public double Grade;
+    public int Id;
+    #endregion
 
-        public Student(int id, double grade)
-        {
-            this.id = id;
-            this.grade = grade;
-        }
+    #region Constructor(s)...
+    public Student(int id, double grade)
+    {
+      Id = id;
+      Grade = grade;
+
     }
+    #endregion
+  }
+  #endregion
 }
