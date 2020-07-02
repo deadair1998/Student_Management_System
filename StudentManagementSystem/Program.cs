@@ -1,19 +1,19 @@
 ﻿namespace StudentManagementSystem
 {
-  #region : Program :
-  class Program
-  {
-    #region Methods...
+	#region : Program :
+	class Program
+	{
+		#region Methods...
 
-    #region Main
-    static void Main(string[] args)
-    {
-      Application app = new Application();
-      app.RunProgram();
-    }
-    #endregion
+		#region Main
+		static void Main(string[] args)
+		{
+			Application app = new Application();
+			app.RunProgram();
+		}
+		#endregion
 
-    #endregion
-  }
-  #endregion
+		#endregion
+	}
+	#endregion
 }

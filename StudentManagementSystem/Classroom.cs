@@ -1,143 +1,176 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace StudentManagementSystem
 {
-    class Classroom
-    {
-        public List<Student> Students = new List<Student>();
+	class Classroom
+	{
+		public List<Student> Students = new List<Student>();
 
-        public double InputGrade()
-        {
-            double gradeTemp;
-            do
-            {
-                Console.WriteLine("Enter student grade: ");
-                gradeTemp = double.Parse(Console.ReadLine());
-            } while (gradeTemp < 0 || gradeTemp > 10);
-            return gradeTemp;
-        }
+		public void AddStudent(Student student)
+		{
+			Students.Add(student);
+		}
 
-        public int InputId(List<Student> students)
-        {
-            int idTemp;
-            bool isDuplicated;
-            do
-            {
-                Console.WriteLine("Enter student ID: ");
-                idTemp = int.Parse(Console.ReadLine());
-                isDuplicated = IsIdDuplicated(students, idTemp);
-                if (isDuplicated) Console.WriteLine("This Id is already in used, please enter another Id !!!");
-            } while (idTemp < 100 || idTemp > 999 || isDuplicated == true);
-            return idTemp;
-        }
+		public void EnterListStudent(List<Student> students)
+		{
 
-        public void AddStudent(Student student)
-        {
-            Students.Add(student);
-        }
+			foreach (var student in students)
+			{
+				Students.Add(student);
+			}
+		}
 
-        public void EnterListStudent(List<Student> students)
-        {
+		public void EnterSingleStudent(int id, double grade)
+		{
+			if (!IsIdDuplicated(id))
+			{
+				Student student = new Student(id, grade);
+				Students.Add(student);
+				Console.WriteLine("Succeed ...");
+			}
+			else
+				Console.WriteLine("Failed...");
+		}
+		public bool IsIdDuplicated(int idTemp)
+		{
+			foreach (var student in Students)
+			{
+				if (student.Id == idTemp) return true;
 
-            Console.WriteLine("Enter a number of student: ");
-            int number = int.Parse(Console.ReadLine());
+			}
+			return false;
+		}
 
-            for (int i = 0; i < number; i++)
-            {
-                EnterSingleStudent(students);
-            }
-        }
+		public Student SearchById(int id)
+		{
+			foreach (var student in Students)
+			{
+				if (id == student.Id)
+				{
+					Console.WriteLine("Student has {0} ID has grade {1}", id, student.Grade);
+					return student;
+				}
+			}
+			return null;
+		}
 
-        public void EnterSingleStudent(List<Student> students)
-        {
-            Console.WriteLine("Enter information of student from the keyboard.");
-            int id = InputId(students);
-            double grade = InputGrade();
-            Student student = new Student(id, grade);
-            students.Add(student);
-        }
+		public double FindHighestGrade()
+		{
+			double highestGrade = 0;
+			foreach (var student in Students)
+			{
+				if (student.Grade > highestGrade)
+				{
+					highestGrade = student.Grade;
+				}
+			}
+			return highestGrade;
+		}
+		public List<Student> GetAllHighestStudents(double highestGrade)
+		{
+			List<Student> listHighestGrade = new List<Student>();
+			foreach (var student in Students)
+			{
+				if (student.Grade == highestGrade)
+				{
+					listHighestGrade.Add(student);
+				}
+			}
+			return listHighestGrade;
+		}
 
-        public void DisplayListStudent()
-        {
-
-            Console.WriteLine("|	ID	|	Grade	|");
-            foreach (var student in Students)
-            {
-                Console.WriteLine("|	{0}	|	{1}	|", student.Id, student.Grade);
-            }
-        }
-
-        public bool IsIdDuplicated(List<Student> students, int idTemp)
-        {
-            foreach (var student in students)
-            {
-                if (student.Id == idTemp) return true;
-
-            }
-            return false;
-        }
-
-        public void SearchById(List<Student> students)
-        {
-
-            Console.WriteLine("Enter student ID: ");
-            int id = int.Parse(Console.ReadLine());
-            bool isFound = false;
-            foreach (var student in students)
-            {
-                if (id == student.Id)
-                {
-                    Console.WriteLine("Student has {0} ID has grade {1}", id, student.Grade);
-                    isFound = true;
-                }
-            }
-            if (!isFound) Console.WriteLine("Can't find any student depend id : {0}", id);
-
-
-        }
-
-        public void FindHighestGrade(List<Student> students)
-        {
-
-            double highestGrade = 0;
-            foreach (var student in students)
-            {
-                if (student.Grade > highestGrade)
-                {
-                    highestGrade = student.Grade;
-                }
-            }
-            Console.WriteLine("|	ID	|	Grade	|");
-            foreach (var student in students)
-            {
-                if (student.Grade == highestGrade)
-                {
-                    Console.WriteLine("|	{0}	|	{1}	|", student.Id, student.Grade);
-                }
-            }
-        }
-
-        public void FindLowestGrade(List<Student> students)
-        {
-
-            double lowestGrade = 10;
-            foreach (var student in students)
-            {
-                if (student.Grade < lowestGrade)
-                {
-                    lowestGrade = student.Grade;
-                }
-            }
-            Console.WriteLine("|	ID	|	Grade	|");
-            foreach (var student in students)
-            {
-                if (student.Grade == lowestGrade)
-                {
-                    Console.WriteLine("|	{0}	|	{1}	|", student.Id, student.Grade);
-                }
-            }
-        }
-    }
+		public double FindLowestGrade()
+		{
+			double lowestGrade = 10;
+			foreach (var student in Students)
+			{
+				if (student.Grade < lowestGrade)
+				{
+					lowestGrade = student.Grade;
+				}
+			}
+			return lowestGrade;
+		}
+		public List<Student> GetAllLowestStudents(double highestGrade)
+		{
+			List<Student> listLowestGrade = new List<Student>();
+			foreach (var student in Students)
+			{
+				if (student.Grade == highestGrade)
+				{
+					listLowestGrade.Add(student);
+				}
+			}
+			return listLowestGrade;
+		}
+		public void SortIdAsc()
+		{
+			Student studentTemp;
+			int i, j;
+			for (i = 0; i < Students.Count; i++)
+			{
+				for (j = i + 1; j < Students.Count; j++)
+				{
+					if (Students[i].Id > Students[j].Id)
+					{
+						studentTemp = Students[i];
+						Students[i] = Students[j];
+						Students[j] = studentTemp;
+					}
+				}
+			}
+		}
+		public void SortGradeAsc()
+		{
+			Student studentTemp;
+			int i, j;
+			for (i = 0; i < Students.Count; i++)
+			{
+				for (j = i + 1; j < Students.Count; j++)
+				{
+					if (Students[i].Grade > Students[j].Grade)
+					{
+						studentTemp = Students[i];
+						Students[i] = Students[j];
+						Students[j] = studentTemp;
+					}
+				}
+			}
+		}
+		public void SortIdDes()
+		{
+			Student studentTemp;
+			int i, j;
+			for (i = 0; i < Students.Count; i++)
+			{
+				for (j = i + 1; j < Students.Count; j++)
+				{
+					if (Students[i].Id < Students[j].Id)
+					{
+						studentTemp = Students[i];
+						Students[i] = Students[j];
+						Students[j] = studentTemp;
+					}
+				}
+			}
+		}
+		public void SortGradeDes()
+		{
+			Student studentTemp;
+			int i, j;
+			for (i = 0; i < Students.Count; i++)
+			{
+				for (j = i + 1; j < Students.Count; j++)
+				{
+					if (Students[i].Grade < Students[j].Grade)
+					{
+						studentTemp = Students[i];
+						Students[i] = Students[j];
+						Students[j] = studentTemp;
+					}
+				}
+			}
+		}
+	}
 }
